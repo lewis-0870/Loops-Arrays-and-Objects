@@ -1,4 +1,95 @@
+/*
+ * CSS created and adapted from google gemini
+ * Global Styles
+ * These styles apply to the whole page to set the overall look and feel.
+ */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* A friendly, playful font */
+    background-color: #f7f3e9; /* A soft, warm background color */
+    color: #333; /* Dark gray for text for good readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything on the page */
+    justify-content: center;
+    min-height: 100vh; /* Make sure the body takes up the full height of the viewport */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/*
+ * Heading Style (h1)
+ * Makes the title big, bold, and welcoming.
+ */
+h1 {
+    font-size: 2.5em; /* Large, easy-to-read font size */
+    color: #1e79e0 !important; /* A bright, friendly blue */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow to make it pop */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*
+ * Dropdown Menu (select)
+ * Styles the dropdown to have rounded corners and a clean look.
+ */
 .form-select {
-    margin: 20px 0;
-    tab-size: 50%;
+    width: 250px;
+    padding: 12px;
+    border: 2px solid #a8c6f1; /* A light blue border */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    font-size: 1.1em;
+    color: #3050a8 !important;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* A subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.form-select:hover {
+    border-color: #5a94d8; /* Darker border on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Bigger shadow on hover */
+}
+
+/*
+ * Button Style
+ * Makes the button colorful and interactive.
+ */
+button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff; /* White text for contrast */
+    background-color: #ff6f61; /* A cheerful, vibrant coral color */
+    border: none;
+    border-radius: 25px; /* Fully rounded corners for a button-like feel */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* A nice shadow */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth hover effects */
+}
+
+button:hover {
+    background-color: #e65c50; /* A slightly darker coral on hover */
+    transform: translateY(-2px); /* Lifts the button slightly */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* A bigger shadow on hover */
+}
+
+/*
+ * Output Paragraph (#result)
+ * Styles the area where the times table is displayed.
+ */
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 1.4em;
+    line-height: 1.6;
+    text-align: center;
+    background-color: #78b7e4;
+    border: 2px solid #bce2f1; /* A light, calming blue border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card-like effect */
+    width: 100%;
+    max-width: 400px;
+    white-space: pre-wrap; /* Keeps line breaks from the JavaScript output */
 }
