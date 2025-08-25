@@ -25,52 +25,75 @@ while (timesTable < 13) {
     timesTable++;
 }
 
+function getSelectedOption() {
+  // Get the dropdown element
+    const dropdown = document.getElementById("timesTable");
+  // Get the selected value and text
+  const value = dropdown.value; // Selected value
+  const text = dropdown.options[dropdown.selectedIndex].text; // Selected text
+  console.log("Selected Value:", value); // Logs "2"
+//   console.log("Selected Text:", text);  // Logs "Option 2"
+  return { value }; // Return as an object for further use
+}
+
+// Example usage 
+getSelectedOption();  
+
 //ARRAYS - using an array []
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+function displayTimesTable() {
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
     for (let i = 0; i < numbers.length; i++) {
-        console.log(numbers[i]*7);
+        console.log(numbers[i] * getSelectedOption().value);
     }
+}
 
-//ARRAYS - TASK2 - Favourite foods
-const favFoods = ['Pizza', 'Pasta', 'Ice Cream', 'Sushi', 'Burgers'];
-    console.log(favFoods[0]);
-    console.log(favFoods[1]);
-    console.log(favFoods[2]);
-    console.log(favFoods[3]);
-    console.log(favFoods[4]);
-    //print to console log each meal item.
-        favFoods.push('Chocolate'); // Adding a new food to the array
-        favFoods[2] = 'Ice Lolly'; // Changing the 3rd item
-    console.log(favFoods[2]); // Output the changed item
-    console.log(favFoods); // Output the entire array to see changes
+displayTimesTable();
+function output() {
+    document.getElementById("result").innerText = 
+        `Here is the ${getSelectedOption().value} times table: \n` 
+        + Array.from({ length: 12 }, (_, i) => `${i + 1} x ${getSelectedOption().value} = ${(i + 1) * getSelectedOption().value}`).join('\n');
+}
 
-    //for of LOOPS - Iterating over the array
-    for (const foods of favFoods) {
-        console.log(foods);
-    }
-    for (let i = 0; i < favFoods.length; i++) {
-        console.log(favFoods[i]);
-    }
+// //ARRAYS - TASK2 - Favourite foods
+// const favFoods = ['Pizza', 'Pasta', 'Ice Cream', 'Sushi', 'Burgers'];
+//     console.log(favFoods[0]);
+//     console.log(favFoods[1]);
+//     console.log(favFoods[2]);
+//     console.log(favFoods[3]);
+//     console.log(favFoods[4]);
+//     //print to console log each meal item.
+//         favFoods.push('Chocolate'); // Adding a new food to the array
+//         favFoods[2] = 'Ice Lolly'; // Changing the 3rd item
+//     console.log(favFoods[2]); // Output the changed item
+//     console.log(favFoods); // Output the entire array to see changes
 
-//OBJECTS - Creating and using objects - TASK 4
-const recipe = {
-    title: 'How to make pizza',
-    servings: 4,
-    ingredients: ['pizza base', 'tomato sauce', 'cheese', 'pepperoni'],
-    directions: ['Preheat oven to 220C.', 'Spread sauce on base.', 'Add toppings.', 'Bake for 15 minutes.']
-};
-        console.log(recipe.title);
-        console.log(recipe.servings);
-        console.log(recipe.ingredients);
-        console.log(recipe.directions);
-        for (const ingredient of recipe.ingredients) {
-            console.log(`- ${ingredient}`);
-        }
-        for (const direction of recipe.directions) {
-            console.log(`- ${direction}`);
-        }
-    //Task 5 - Also first takeaway task
-    function letsCook() {
-        console.log(`I'm hungry lets cook ${recipe.title}`);
-    }
-    letsCook();
+//     //for of LOOPS - Iterating over the array
+//     for (const foods of favFoods) {
+//         console.log(foods);
+//     }
+//     for (let i = 0; i < favFoods.length; i++) {
+//         console.log(favFoods[i]);
+//     }
+
+// //OBJECTS - Creating and using objects - TASK 4
+// const recipe = {
+//     title: 'How to make pizza',
+//     servings: 4,
+//     ingredients: ['pizza base', 'tomato sauce', 'cheese', 'pepperoni'],
+//     directions: ['Preheat oven to 220C.', 'Spread sauce on base.', 'Add toppings.', 'Bake for 15 minutes.']
+// };
+//         console.log(recipe.title);
+//         console.log(recipe.servings);
+//         console.log(recipe.ingredients);
+//         console.log(recipe.directions);
+//         for (const ingredient of recipe.ingredients) {
+//             console.log(`- ${ingredient}`);
+//         }
+//         for (const direction of recipe.directions) {
+//             console.log(`- ${direction}`);
+//         }
+//     //Task 5 - Also first takeaway task
+//     function letsCook() {
+//         console.log(`I'm hungry lets cook ${recipe.title}`);
+//     }
+//     letsCook();
